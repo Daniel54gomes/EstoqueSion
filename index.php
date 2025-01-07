@@ -29,6 +29,18 @@ include("php/function.php");
         <p class="ipBt">
             <input type="submit" name="btnLogin" id="btnLogin" value="Login">
         </p>
+        <p class="RegisterUser">
+            <h5>
+                Não tem cadastro? Clique <a href="registerUser.php">AQUI</a> e cadastre-se!
+            </h5>
+        </p>
+        <p>
+            <h6>
+                <?php
+                    //Mensagens de aviso login
+                ?>
+            </h6>
+        </p>
     </form>
 </body>
 </html>
