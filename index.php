@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-include("php/function.php");
+//include("php/function.php");
 
 ?>
 
@@ -13,11 +13,11 @@ include("php/function.php");
     <title>Login Sion</title>
 </head>
 <body>
-    <form method="POST" action="php/validaAcesso.php" class="form">
+    <form method="POST" action="php/verifyAcess.php" class="form">
         <div class="logo">
             <p>Monte Sion</p>
         </div>
-
+        <br>
         <p class="ipLogin">
             <label for="usuario">Usuario: </label>
             <input type="text" name="nLogin" id="iLogin" placeholder="Usuario" maxlength="50">
