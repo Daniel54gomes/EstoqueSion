@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
 //include("php/function.php");
 
 ?>
@@ -18,16 +18,16 @@
         <br>
         <p class="ipLogin">
             <label for="usuario">Nome: </label>
-            <input type="text" name="nNome" id="iNome" placeholder="Insira seu nome" maxlength="80">
+            <input type="text" name="nNome" id="iNome" placeholder="Insira seu nome" maxlength="80" required>
         </p>
 
         <p class="ipLogin">
             <label for="usuario">Usuario: </label>
-            <input type="text" name="nLogin" id="iLogin" placeholder="Insira seu email" maxlength="80">
+            <input type="text" name="nLogin" id="iLogin" placeholder="Insira seu email" maxlength="80" required>
         </p>
         <p class="ipSenha">
             <label for="senha">Senha: </label>
-            <input type="password" name="nSenha" id="iSenha" placeholder="Senha" maxlength="8">
+            <input type="password" name="nSenha" id="iSenha" placeholder="Senha" maxlength="8" required>
         </p>
         <p class="ipBt">
             <input type="submit" name="btnCadastro" id="btnCadastro" value="Cadastrar">
@@ -35,7 +35,10 @@
         <p>
             <h6>
                 <?php
-                    //Mensagens de aviso login
+                    if(isset($_SESSION['alertUser'])){
+                        echo $_SESSION['alertUser'];
+                        session_destroy();
+                    }
                 ?>
             </h6>
         </p>

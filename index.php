@@ -20,11 +20,11 @@ session_start();
         <br>
         <p class="ipLogin">
             <label for="usuario">Usuario: </label>
-            <input type="text" name="nLogin" id="iLogin" placeholder="Usuario" maxlength="50">
+            <input type="text" name="nLogin" id="iLogin" placeholder="Usuario" maxlength="80" required>
         </p>
         <p class="ipSenha">
             <label for="senha">Senha: </label>
-            <input type="password" name="nSenha" id="iSenha" placeholder="Senha" maxlength="8">
+            <input type="password" name="nSenha" id="iSenha" placeholder="Senha" maxlength="8" required>
         </p>
         <p class="ipBt">
             <input type="submit" name="btnLogin" id="btnLogin" value="Login">
