@@ -1,10 +1,4 @@
-<?php 
-
-session_start();
-//include("php/function.php");
-
-?>
-
+<?php if(session_status() != PHP_SESSION_ACTIVE){ session_start();} ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,11 +13,11 @@ session_start();
         </div>
         <br>
         <p class="ipLogin">
-            <label for="usuario">Usuario: </label>
+            <label for="iLogin">Usuario: </label>
             <input type="text" name="nLogin" id="iLogin" placeholder="Usuario" maxlength="80" required>
         </p>
         <p class="ipSenha">
-            <label for="senha">Senha: </label>
+            <label for="iSenha">Senha: </label>
             <input type="password" name="nSenha" id="iSenha" placeholder="Senha" maxlength="8" required>
         </p>
         <p class="ipBt">
@@ -31,15 +25,13 @@ session_start();
         </p>
         <p class="RegisterUser">
             <h5>
-                Não tem cadastro? Clique <a href="registerUser.php">AQUI</a> e cadastre-se!
+                Não tem cadastro? Clique <a href="registerUser.php?op=0">AQUI</a> e cadastre-se!
             </h5>
         </p>
         <p>
-            <h6>
-                <?php
-                    //Mensagens de aviso login
-                ?>
-            </h6>
+            <h4>
+                <?php if(isset($_SESSION['alertUser'])){ echo $_SESSION['alertUser']; unset($_SESSION['alertUser']);} ?>
+            </h4>
         </p>
     </form>
 </body>

@@ -1,11 +1,5 @@
-<?php 
-
-//include('verifyAcess.php');
-include('functionProduct.php');
+<?php
+include('functionEstoque.php');
+include('functionProduto.php');
 include('functionUser.php');
-//include('saveProduct.php');
-//include('saveUser.php');
-//include('');
-//include('');
-
 ?>
